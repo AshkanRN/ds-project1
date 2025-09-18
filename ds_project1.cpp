@@ -272,11 +272,11 @@ class emergencyQueue {
             }
 
             node* current = head;
-            int postion = 1;
+            int position = 1;
 
             cout<<endl;
             while (current != nullptr) {
-                cout<<postion++<<".  "<<current->patient->firstName<<"  "<<current->patient->lastName
+                cout<<position++<<".  "<<current->patient->firstName<<"  "<<current->patient->lastName
                     <<" -- ID:"<<current->patient->ID<<" -- Age:"<<current->patient->age<<endl;
                 current = current->next;
             }
