@@ -58,7 +58,9 @@ The following are built from scratch:
 
 ## How to run
 
-### Method 1: Using CMake (Recommended)
+### Linux
+
+#### Method 1: Using CMake (Recommended)
 
 **Create the build folder and generate build files:**
 ```bash
@@ -84,7 +86,7 @@ cmake --build .
 
 ---
 
-### Method 2: Manual g++ (No CMake needed)
+#### Method 2: Manual g++ (No CMake needed)
 
 **Compile**
 ```bash
