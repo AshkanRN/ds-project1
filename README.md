@@ -38,36 +38,80 @@ The following are built from scratch:
 
 ---
 
-### Roles
-1. Management
-2. Clinic Doctor
-3. Emergency Doctor
-4. Patient
-5. Pharmacy
-6. Triage
-
-### Sign-Up Flow
-1. User enters username, password, name, ID, age, and role.
-2. Program checks username availability.
-3. On success, account is created and stored in memory.
-
-### Log-In Flow
-1. User enters username and password.
-2. If valid → redirected to role-specific menu.
-3. If invalid → login rejected.
-
----
-
-## Usage (Quick Walkthrough)
-When you run the program, the main menu offers:
-
-1. **Sign Up** — create an account
-2. **Log In** — access role-based actions
-
-### Role-specific actions:
+## Roles actions:
 - **Management (1)**: add clinics, add doctors (clinic/emergency), delete user, search users, list all users
 - **Clinic Doctor (2)**: view patient queue, process visits, prescribe medicines
 - **Patient (4)**: select clinic/doctor, join/cancel queue, go to triage
 - **Triage (6) & Emergency Doctor (3)**: assign priority, serve patients by priority
 - **Pharmacy (5)**: lookup patient by ID, dispense medicines (stack pop)
 
+---
+
+
+## Requirements
+
+- C++17 or later
+- GCC / G++ compiler
+- CMake 3.20+ *(only if using CMake method)*
+
+---
+
+## How to run
+
+### Method 1: Using CMake (Recommended)
+
+**Create the build folder and generate build files:**
+```bash
+mkdir build && cd build
+```
+
+```bash
+cmake ..
+```
+
+**Compile:**
+```bash
+cmake --build .
+```
+
+**Run:**
+```bash
+./HospitalSystem
+```
+
+> After the first setup, you only need to repeat steps 2 and 3 when you change your code.
+> Only re-run `cmake ..` if you add new `.cpp` files to the project.
+
+---
+
+### Method 2: Manual g++ (No CMake needed)
+
+**Compile**
+```bash
+g++ -std=c++17 -Iinclude main.cpp src/*.cpp -o HospitalSystem
+```
+
+**Run**
+```bash
+./HospitalSystem
+```
+
+---
+
+### Windows
+
+**Using CMake:**
+```bash
+mkdir build && cd build
+cmake .. -G "MinGW Makefiles"
+cmake --build .
+HospitalSystem.exe
+```
+
+**Using manual g++:**
+```bash
+g++ -std=c++17 -Iinclude main.cpp src/*.cpp -o HospitalSystem.exe
+HospitalSystem.exe
+```
+
+---
