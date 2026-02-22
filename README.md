@@ -58,21 +58,21 @@ The following are built from scratch:
 
 ## How to run
 
+```bash
+git clone https://github.com/AshkanRN/hospital-management-ds1.git
+cd hospital-management-ds1
+```
+
 ### Linux
 
 #### Method 1: Using CMake (Recommended)
 
-**Create the build folder and generate build files:**
+**Build:**
 ```bash
 mkdir build && cd build
-```
 
-```bash
 cmake ..
-```
 
-**Compile:**
-```bash
 cmake --build .
 ```
 
@@ -80,9 +80,6 @@ cmake --build .
 ```bash
 ./HospitalSystem
 ```
-
-> After the first setup, you only need to repeat steps 2 and 3 when you change your code.
-> Only re-run `cmake ..` if you add new `.cpp` files to the project.
 
 ---
 
